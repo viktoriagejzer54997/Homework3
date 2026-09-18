@@ -1,0 +1,10 @@
+Error;Bug;Success
+Warning;Fix;Feature
+bug;info;critical
+Error;Fix;Bug
+Error;Fix;Info
+Fix;Info;Bug
+Bug;Bug;Bug
+Info;Error;Critical
+Critical;Info;Warning
+Warning;Success;Buug
