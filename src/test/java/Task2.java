@@ -26,7 +26,7 @@ public class Task2 {
         int n = random.nextInt(1, 101);
         boolean actual = isEven(n);
         boolean expected = (n % 2 == 0);
-        assertThat(isEven(n))
+        assertThat(actual)
                 .isEqualTo(expected);
     }
 
@@ -42,7 +42,7 @@ public class Task2 {
         int age = random.nextInt(0, 100);
         String actual = checkAccess(age);
         String expected = (age > 18) ? "Allowed" : "Denied";
-        assertThat(checkAccess(age))
+        assertThat(actual)
                 .as("Неверно определены разрешенные границы")
                 .isEqualTo(expected);
     }
@@ -62,7 +62,7 @@ public class Task2 {
         int n = random.nextInt(-50, 51);
         boolean actual = isPositive(n);
         boolean expected = n >= 0;
-        assertThat(isPositive(n))
+        assertThat(actual)
                 .isEqualTo(expected);
     }
 
@@ -99,7 +99,7 @@ public class Task2 {
         else if (score <= 100) expected = "A";
         else expected = "Error";
 
-        assertThat(getGrade(score))
+        assertThat(actual)
                 .as("Неверная оценка")
                 .isEqualTo(expected);
     }
@@ -139,7 +139,7 @@ public class Task2 {
             text = text + j + " ";
         }
         String expected = text + "Поехали!";
-        assertThat(blastOff(start))
+        assertThat(actual)
                 .isEqualTo(expected);
     }
 
@@ -162,7 +162,7 @@ public class Task2 {
         int n = random.nextInt(0, 101);
         int actual = sumToN(n);
         int expected = (n * (n + 1)) / 2;
-        assertThat(sumToN(n))
+        assertThat(actual)
                 .isEqualTo(expected);
     }
 
@@ -195,7 +195,7 @@ public class Task2 {
             }
         }
 
-        assertThat(hasBug(messages))
+        assertThat(actual)
                 .as("Неверно определили местонахождение Bug")
                 .isEqualTo(expected);
     }

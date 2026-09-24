@@ -41,7 +41,7 @@ public class Task2_package {
         }
         expected = expected.trim();
 
-        assertThat(getEvenInRange(start,end))
+        assertThat(actual)
                 .isEqualTo(expected);
     }
 
@@ -71,7 +71,7 @@ public class Task2_package {
 
         int actual = findMax(arr);
         int expected = Arrays.stream(arr).max().getAsInt();
-        assertThat(findMax(arr))
+        assertThat(actual)
                 .as("Не максимальное значение из массива!")
                 .isEqualTo(expected);
     }
@@ -104,7 +104,7 @@ public class Task2_package {
             j++;
         }
 
-        assertThat(reverse(arr))
+        assertThat(actual)
                 .isEqualTo(expected);
     }
 
@@ -131,7 +131,7 @@ public class Task2_package {
         }
         double actual = calcAverage(list);
         double expected = list.stream().mapToDouble(Integer::doubleValue).average().orElse(0.0);
-        assertThat(calcAverage(list))
+        assertThat(actual)
                 .isEqualTo(expected);
     }
 
@@ -163,7 +163,7 @@ public class Task2_package {
                 expected.add(currentName);
             }
         }
-        assertThat(removeSpecificName(list, nameToRemove))
+        assertThat(actual)
                 .isEqualTo(expected);
 
 

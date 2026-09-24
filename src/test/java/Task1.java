@@ -29,7 +29,7 @@ public class Task1 {
         int n = random.nextInt(1, 101);
         boolean actual = isEven(n);
         boolean expected = (n % 2 == 0);
-        assertThat(isEven(n))
+        assertThat(actual)
                 .isEqualTo(expected);
     }
 
@@ -57,7 +57,7 @@ void test2(String rawList, String nameToRemove) {
             expected.add(currentName);
         }
     }
-    assertThat(removeSpecificName(list, nameToRemove))
+    assertThat(actual)
             .isEqualTo(expected);
 
 }
@@ -86,7 +86,7 @@ void test2(String rawList, String nameToRemove) {
 
         int actual = findMax(arr);
         int expected = Arrays.stream(arr).max().getAsInt();
-        assertThat(findMax(arr))
+        assertThat(actual)
                 .as("Не максимальное значение из массива!")
                 .isEqualTo(expected);
     }
@@ -122,7 +122,7 @@ void test2(String rawList, String nameToRemove) {
         else if (score <= 100) expected = "A";
         else expected = "Error";
 
-        assertThat(getGrade(score))
+        assertThat(actual)
                 .as("Неверная оценка")
                 .isEqualTo(expected);
     }
